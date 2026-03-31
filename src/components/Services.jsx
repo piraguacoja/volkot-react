@@ -48,9 +48,14 @@ const services = [
 function ServiceCard({ service }) {
   return (
     <div className="service-card reveal">
-      <span className="service-num">{service.num}</span>
-      <span className="service-icon">{service.icon}</span>
-      <div className="service-name">{service.name}</div>
+      <div className="service-card-header">
+        <span className="service-icon">{service.icon}</span>
+        <span className="service-num">{service.num}</span>
+      </div>
+      <div className="service-name">
+        {service.name}
+        <span className="service-name-cursor" />
+      </div>
       <p className="service-desc">{service.desc}</p>
       <div className="service-tags">
         {service.tags.map(tag => (
