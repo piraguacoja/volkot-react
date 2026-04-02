@@ -29,7 +29,7 @@ export default function Hero() {
         </div>
         <div className="stat-divider"></div>
         <div className="stat-line">
-          <div className="stat-num">3</div>
+          <div className="stat-num">6</div>
           <div className="stat-label">Cloud platforms</div>
         </div>
         <div className="stat-divider"></div>

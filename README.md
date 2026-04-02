@@ -1,16 +1,40 @@
-# React + Vite
+# Volkot Labs — Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The public source for **[volkotlabs.com](https://volkotlabs.com)** — our company landing page.
 
-Currently, two official plugins are available:
+Volkot Labs is a cloud & DevOps engineering consultancy. We design, build, and operate cloud infrastructure, CI/CD pipelines, and platform tooling for teams that need things done right.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** + **Vite** — fast builds, instant HMR
+- **Lucide React** — clean SVG icon set
+- **Pure CSS** — no UI framework, all custom styles with CSS variables
+- **GitHub Actions** — automated build & deploy to GitHub Pages
 
-## Expanding the ESLint configuration
+## Running locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:5173`.
+
+## Building for production
+
+```bash
+npm run build
+npm run preview
+```
+
+Output lands in `dist/`.
+
+## Deployment
+
+Pushes to `master` automatically trigger the GitHub Actions workflow, which builds the site and deploys it to GitHub Pages at [volkotlabs.com](https://volkotlabs.com).
+
+---
+
+Curious about how it's built? Feel free to poke around. If something catches your eye or you spot a bug, open an issue — we're always happy to hear from fellow engineers.
