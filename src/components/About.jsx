@@ -4,11 +4,11 @@ const badges = [
   { label: 'Azure',          style: { top: '20px',  left: '60px',  animation: 'float1 6s ease-in-out infinite' } },
   { label: 'Kubernetes',     style: { top: '20px',  right: '20px', animation: 'float2 5s ease-in-out infinite 1s' } },
   { label: 'Terraform',      style: { top: '120px', left: '10px',  animation: 'float1 7s ease-in-out infinite 0.5s' } },
-  { label: 'Databricks',     style: { top: '140px', right: '60px', animation: 'float2 6s ease-in-out infinite 2s' } },
+  { label: 'React',          style: { top: '140px', right: '60px', animation: 'float2 6s ease-in-out infinite 2s' } },
   { label: 'GitHub Actions', style: { top: '240px', left: '80px',  animation: 'float1 5s ease-in-out infinite 1.5s' } },
-  { label: 'Docker',         style: { top: '260px', right: '10px', animation: 'float2 7s ease-in-out infinite 0.8s' } },
-  { label: 'Helm',           style: { top: '360px', left: '20px',  animation: 'float1 6s ease-in-out infinite 2s' } },
-  { label: 'Vertex AI',      style: { top: '360px', right: '70px', animation: 'float2 5s ease-in-out infinite 1.2s' } },
+  { label: 'Python',         style: { top: '260px', right: '10px', animation: 'float2 7s ease-in-out infinite 0.8s' } },
+  { label: 'FastAPI',        style: { top: '360px', left: '20px',  animation: 'float1 6s ease-in-out infinite 2s' } },
+  { label: 'Node.js',        style: { top: '360px', right: '70px', animation: 'float2 5s ease-in-out infinite 1.2s' } },
 ];
 
 export default function About() {

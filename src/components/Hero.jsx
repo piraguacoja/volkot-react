@@ -37,6 +37,11 @@ export default function Hero() {
           <div className="stat-num">100%</div>
           <div className="stat-label">IaC-driven</div>
         </div>
+        <div className="stat-divider"></div>
+        <div className="stat-line">
+          <div className="stat-num">5</div>
+          <div className="stat-label">Software tools</div>
+        </div>
       </div>
 
       <div className="scroll-hint">

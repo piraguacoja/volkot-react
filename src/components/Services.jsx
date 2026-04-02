@@ -4,8 +4,18 @@ import {
   SiDatabricks, SiMlflow, SiNvidia,
   SiGooglecloud, SiGithub,
   SiFortinet, SiPaloaltonetworks, SiCloudflare, SiSnyk,
+  SiApachespark, SiLooker, SiGooglebigquery,
+  SiReact, SiNodedotjs, SiPython, SiFastapi, SiFirebase,
 } from '@icons-pack/react-simple-icons';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+
+function PowerBIIcon({ size = 20 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-label="Power BI">
+      <path d="M4 20h2V9H4v11zm4 0h2V4H8v16zm4 0h2v-8h-2v8zm4 0h2v-5h-2v5z"/>
+    </svg>
+  );
+}
 
 function AzureIcon({ size = 20 }) {
   return (
@@ -73,18 +83,21 @@ const services = [
   },
   {
     num: '05',
-    name: 'Data Platforms',
+    name: 'Data Platforms & Analytics',
     icons: [
       { component: SiDatabricks, label: 'Databricks', color: '#FF3621' },
-      { component: AwsIcon, label: 'AWS', color: '#FF9900' },
+      { component: SiApachespark, label: 'Spark', color: '#E25A1C' },
+      { component: PowerBIIcon, label: 'Power BI', color: '#F2C811' },
+      { component: SiLooker, label: 'Looker', color: '#4285F4' },
+      { component: SiGooglebigquery, label: 'BigQuery', color: '#4285F4' },
       { component: AzureIcon, label: 'Azure', color: '#0078D4' },
     ],
-    desc: 'Modern data architectures with Databricks, Azure Data Factory, and Unity Catalog. From ingestion to governance.',
+    desc: 'Modern data architectures with Databricks, Azure Data Factory, and Unity Catalog — from raw ingestion to governed analytics and business intelligence dashboards.',
     repo: 'https://github.com/volkotlabs',
   },
   {
     num: '06',
-    name: 'AI/ML Infrastructure',
+    name: 'AI / ML Infrastructure',
     icons: [
       { component: SiGooglecloud, label: 'Vertex AI', color: '#4285F4' },
       { component: AzureIcon, label: 'Azure ML', color: '#0078D4' },
@@ -92,6 +105,20 @@ const services = [
       { component: SiNvidia, label: 'NVIDIA', color: '#76B900' },
     ],
     desc: 'Cloud-native ML pipelines, model serving infrastructure, and GPU-accelerated workloads on Vertex AI and Azure ML.',
+    repo: 'https://github.com/volkotlabs',
+  },
+  {
+    num: '07',
+    name: 'Custom Software & Tooling',
+    icons: [
+      { component: SiReact, label: 'React', color: '#61DAFB' },
+      { component: SiNodedotjs, label: 'Node.js', color: '#339933' },
+      { component: SiPython, label: 'Python', color: '#3776AB' },
+      { component: SiFastapi, label: 'FastAPI', color: '#009688' },
+      { component: SiFirebase, label: 'Firebase', color: '#FFCA28' },
+      { component: SiGooglecloud, label: 'GCP', color: '#4285F4' },
+    ],
+    desc: 'Purpose-built software for teams tired of forcing their workflows into tools that almost fit. Internal platforms, developer tools, automation scripts, REST APIs, and lightweight web apps — designed around your actual needs, not a generic template.',
     repo: 'https://github.com/volkotlabs',
   },
 ];
@@ -141,7 +168,10 @@ export default function Services() {
         <div className="section-line"></div>
       </div>
       <div className="services-grid">
-        {services.map(s => <ServiceCard key={s.num} service={s} />)}
+        {services.slice(0, 6).map(s => <ServiceCard key={s.num} service={s} />)}
+      </div>
+      <div className="services-grid services-grid--centered">
+        <ServiceCard service={services[6]} />
       </div>
     </section>
   );

@@ -356,6 +356,12 @@ section { position: relative; z-index: 2; }
   gap: 24px;
 }
 
+.services-grid--centered {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: calc((100% - 48px) / 3);
+  margin: 24px auto 0;
+}
+
 @keyframes card-grid-move {
   0%   { background-position: 0 0; }
   100% { background-position: 30px 30px; }
@@ -883,6 +889,7 @@ footer {
   #services, #process, #contact, footer { padding: 80px 24px; }
 
   .services-grid { grid-template-columns: 1fr; }
+  .services-grid--centered { max-width: 100%; }
 
   .process-list { grid-template-columns: 1fr 1fr; gap: 48px; }
 
